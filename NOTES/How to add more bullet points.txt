@@ -1,0 +1,9 @@
+Do you validate/test the converted code for correctness against the original mainframe behavior?
+
+Any work on performance or scale of the conversion tooling itself?
+
+Collaboration with customer teams or stakeholders during migrations?
+
+Mentoring or technical leadership within the team?
+
+Anything around CI/CD, automation, or deployment of the converted systems?

@@ -1,0 +1,29 @@
+---------------
+When looking at a LinkedIn or Indeed job description, what is my algorithm to decide which of the two kinds or roles I am looking at?
+---------------
+
+Quick heuristic — scan the job description for these signals:
+
+It's an Architect role if you see emphasis on:
+
+"Design systems," "define architecture," "technical vision/strategy"
+"Cross-team," "influence," "stakeholders," "alignment"
+"Trade-offs," "scalability," "technical decisions"
+"Mentor," "guide," "set standards"
+Less emphasis on sprint work, PRs, shipping features directly
+It's a Lead/Senior IC role if you see emphasis on:
+
+"Build," "implement," "ship," "deliver"
+"Own a component/service/feature end-to-end"
+"Code reviews," "pull requests," "hands-on"
+"Collaborate with your team," "agile/scrum"
+Specific tech stack requirements with depth expectations
+The one-line test: Does the job description spend more words on what you'll decide or what you'll build? Decide → Architect. Build → Lead.
+
+In practice, many roles are a blend. When it's ambiguous, look at two tiebreakers:
+
+Title and level — If the posting says "Staff," "Principal," or "Architect," use Software Architect. If it says "Senior," "Lead," or "Sr. Engineer," use Lead Software Engineer.
+
+Team size mentioned — Large team or multiple teams → Architect. Small team or "small, scrappy team" → Lead.
+
+Either way, you don't need to maintain two full resumes — just swap the ZYRLO title line. The bullets work for both.

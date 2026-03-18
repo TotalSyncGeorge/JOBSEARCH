@@ -1,0 +1,57 @@
+--
+Generic software engineering titles are becoming commoditized
+What's safe and growing:
+
+Roles requiring physical-world interaction, deep domain expertise, or regulatory compliance
+- Cybersecurity: near 0% unemployment, 33% projected growth, 120K−286K+
+- Platform Engineering/SRE: 80% of large orgs will have platform teams by end of 2026
+- Mainframe modernization: market growing from  36.6B to 76B+ by 2032 at 15% CAGR
+- Embedded/IoT: 17% growth, persistent talent shortage, AI-resistant due to hardware interaction
+
+---
+
+
+continued demand for people who can bridge mainframe + cloud + data + security
+
+-----
+
+1. Mainframe Modernization Specialist / Independent Consultant (Best Near-Term Play: Years 0-5)
+Why this is your strongest card:
+
+You are already building the automated migration tooling. This is not just "migrating mainframes" -- you're building the tools that migrate mainframes. That's a tier above.
+The COBOL talent cliff is real: 220,000 developers remain globally, average age 58-59, 92% retiring by 2030. 47% of organizations cannot fill these roles today.
+The market is  36.6Btoday,headingto76B by 2032.
+
+Your compiler front-end thesis makes you uniquely qualified for code transformation work -- you understand ASTs, code generation, and language semantics at a level most engineers don't.
+
+What to do:
+
+Position yourself explicitly as a Legacy Modernization & Code Transformation Architect, not a generic software engineer
+Build visibility: write articles or give talks about automated mainframe migration patterns, AST-based code rewriting, semantic equivalence testing
+Within 2-3 years, consider independent consulting or a boutique firm. At 
+250
+−
+250−350/hr, even 1,200 billable hours/year = 
+300
+K
+−
+300K−420K
+Acquire: deeper COBOL reading fluency (you don't need to write it, but reading and understanding semantics is valuable), familiarity with IBM z/OS JCL, CICS, IMS
+Risk: Medium-low. AI tools will assist modernization but the domain complexity, edge cases, and business-logic archaeology require human judgment for years to come. Being the person who builds the AI-assisted tools rather than the person replaced by them is the ideal position.
+
+
+
+
+-------------------
+
+
+Opus 4.6 says:
+
+- Mainframe modernization consulting is still the strongest play -- but the path is through the traditional modernization market and firms, not through an "AI code migration" niche that barely exists as a job market.
+- Your differentiator is building reliable, deterministic migration tooling that actually works in production -- which is what enterprises with $50M mainframe estates actually need, as opposed to LLM-generated code that might corrupt their databases.
+- The skills to acquire should focus more on the business and domain side (understanding COBOL semantics, mainframe transaction processing, banking/insurance domain knowledge, consulting/client management) rather than on LLMs.
+
+--------------
+
+ Your Amdocs work is not “just enterprise Java/C#”
+It is enterprise transformation under correctness constraints. That is rarer.
