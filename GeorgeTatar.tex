@@ -1,8 +1,9 @@
-\documentclass[10pt]{article}
-\usepackage[letterpaper,margin=0.72in]{geometry}
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.68in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage{microtype}
 \usepackage[svgnames]{xcolor}
 \usepackage[hidelinks]{hyperref}
@@ -16,23 +17,23 @@
 \pagenumbering{gobble}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setstretch{1.03}
-\definecolor{accent}{HTML}{12344D}
-\definecolor{textgray}{HTML}{2A2A2A}
+\setstretch{1.05}
+\definecolor{accent}{HTML}{0F2740}
+\definecolor{textgray}{HTML}{222222}
 \definecolor{muted}{HTML}{4B5563}
 
 \titleformat{\section}
-  {\large\bfseries\color{accent}}
+  {\Large\bfseries\color{accent}}
   {}
   {0pt}
   {}
-  [\vspace{2pt}\color{accent}\titlerule]
-\titlespacing*{\section}{0pt}{10pt}{6pt}
+  [\vspace{3pt}{\color{accent}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{12pt}{8pt}
 
 \setlist[itemize]{
-  leftmargin=1.15em,
-  itemsep=2pt,
-  topsep=3pt,
+  leftmargin=1.2em,
+  itemsep=3pt,
+  topsep=4pt,
   parsep=0pt,
   partopsep=0pt
 }
@@ -48,8 +49,8 @@
 \begin{document}
 
 {\centering
-  {\fontsize{20}{22}\selectfont\bfseries GEORGE TATAR}\\[6pt]
-  {\color{textgray}27 Woodbury Drive \textbar\ Needham, MA 02494 \textbar\ (617) 515-9081 \textbar\ \href{mailto:gtatar@tatar-family.com}{gtatar@tatar-family.com}}\\
+  {\fontsize{21}{23}\selectfont\bfseries GEORGE TATAR}\\[8pt]
+  {\normalsize\color{textgray}27 Woodbury Drive \textbar\ Needham, MA 02494 \textbar\ (617) 515-9081 \textbar\ \href{mailto:gtatar@tatar-family.com}{gtatar@tatar-family.com}}\\
 \par}
 
 \resheader{SKILLS}
@@ -64,7 +65,7 @@
 
 \resheader{PROJECTS}
 
-\textbf{Stack Overflow Tag Recommendation (Machine Learning \& MLOps)}
+{\textbf{Stack Overflow Tag Recommendation} \color{muted}(Machine Learning \& MLOps)}
 \begin{itemize}
 \item Built a multi-label text classification system to automatically tag Stack Overflow questions, using transformer-based models (BERT/DistilBERT) and comparing against keyword baselines and logistic regression.
 \item Processed 500k+ questions (BigQuery public dataset) with custom preprocessing to strip HTML, code snippets, and noise; engineered embeddings for scalable training on GPU.
