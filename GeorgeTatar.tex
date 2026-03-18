@@ -1,0 +1,181 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=2pt}
+\pagenumbering{gobble}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Large GEORGE TATAR} \\[6pt]
+27 Woodbury Drive \\
+Needham, MA 02494 \\
+(617) 515-9081 \\
+gtatar@tatar-family.com
+\end{center}
+
+\vspace{10pt}
+
+\textbf{SKILLS}
+
+\begin{itemize}
+\item Full stack development of enterprise software. Java, C\#, C, C++, Python, HTML, CSS, JavaScript.
+\item Experience with SQL databases: PostgreSQL, MariaDB, Microsoft SQL Server.
+\item DevOps: micro-services, Docker, Kubernetes, EKS, RDS, S3, CloudFront.
+\item Embedded firmware development for Linux and bare hardware.
+\item Experience writing performance-critical and data-integrity-critical code.
+\end{itemize}
+
+\vspace{10pt}
+
+\textbf{PROJECTS}
+
+\textbf{Stack Overflow Tag Recommendation (Machine Learning \& MLOps)}
+
+\begin{itemize}
+\item Built a multi-label text classification system to automatically tag Stack Overflow questions, using transformer-based models (BERT/DistilBERT) and comparing against keyword baselines and logistic regression.
+\item Processed 500k+ questions (BigQuery public dataset) with custom preprocessing to strip HTML, code snippets, and noise; engineered embeddings for scalable training on GPU.
+\item Implemented a full MLOps pipeline: MLflow for experiment tracking \& model registry, Prefect for orchestration, and automated retraining with new questions.
+\item Deployed model as a FastAPI REST service (Docker + Kubernetes), with monitoring for concept drift and logging of unseen tags.
+\item Achieved 0.71 micro-F1 vs. 0.32 keyword baseline, demonstrating clear improvements from ML-driven methods.
+\end{itemize}
+
+\vspace{10pt}
+
+\textbf{EXPERIENCE}
+
+\begin{tabularx}{\textwidth}{X r}
+\textbf{AMDOCS} & Remote \\
+Software Engineer & 2023-present \\
+\end{tabularx}
+
+\begin{itemize}
+\item Serve as a key contributor to comprehensive automatic mainframe-to-cloud migration toolkit.
+\item Design and implement new features for the conversion tools that automatically rewrite millions of lines of legacy code into functionally equivalent C\# or Java.
+\item ETL: build and optimize robust data migration tools for transfer of schema and data from legacy databases to SQL databases, including SQL Server, Oracle, and PostgreSQL.
+\item Develop Java and C\# libraries to emulate mainframe features on Linux and Windows.
+\item C\#, Java, SQL Server, Oracle, PostgreSQL.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\textwidth}{X r}
+\textbf{ZYRLO} & Sudbury, MA \\
+Embedded Software Engineer & 2021-2023 \\
+\end{tabularx}
+
+\begin{itemize}
+\item Developed embedded software for assistive devices for visually impaired people.
+\item Integrated Braille IO device in Android apps using JNI, ioctl and custom I2C protocol.
+\item Raspberry Pi development in C++ under Ubuntu Core. Integrated with RPI camera, audio (I2S and Bluetooth) and custom I2C devices.
+\item ESP32 development in C.
+\item C/C++, Java, JNI, Raspberry Pi, Bluetooth.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\textwidth}{X r}
+\textbf{AKRUTO, INC} & Needham, MA \\
+Founder & 2019-2021 \\
+\end{tabularx}
+
+\begin{itemize}
+\item Created AkrutoSync app to sync MS Outlook contacts and calendar with smartphones.
+\item Implemented Microsoft Exchange protocol by reading documentation and observing a real Exchange Server behavior.
+\item Set up all aspects of a small company operation from building a website to customer support.
+\item C\#, WPF, SQLite database.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\textwidth}{X r}
+\textbf{CIMPRESS/VISTAPRINT} & Waltham, MA \\
+Lead Software Engineer & 2013-2019 \\
+\end{tabularx}
+
+\begin{itemize}
+\item Full-stack development in Linux and Windows environments using C\#, MySQL and deploying to AWS (EC2, RDS, S3, CloudFront).
+\item Implemented low-level integration with a new embroidery machine.
+\item Researched and implemented OAuth2.0 using Auth0.
+\item Participated in dev-ops using AWS cloud: CloudFormation , EC2, S3, MariaDB, Cloudfront; production, staging and development environments.
+\item C\#, Microsoft SQL Server, WPF, .NET Core on Ubuntu Linux, MySQL, AWS
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\textwidth}{X r}
+\textbf{DESKTONE, INC} & Lexington, MA \\
+Engineering Lead & 2012-2013 \\
+\end{tabularx}
+
+\begin{itemize}
+\item Desktop as a Service product –Virtual Machines as a cloud service using private or public cloud.
+\item Converted the product from a single-datacenter system to multi-datacenter. Postgres replication, multi-DC failover and failback. Communication between management nodes across datacenters.
+\item Provided technical leadership for junior team members.
+\item Multi-datacenter distributed system with 3 types of nodes and at least one pair of each type of node in each datacenter for redundancy.
+\item Java, Tomcat, Spring, Hibernate, Ubuntu Linux, PostgreSQL, Python.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\textwidth}{X r}
+\textbf{ACTIFIO, INC} & Waltham, MA \\
+Architect & 2009-2012 \\
+\end{tabularx}
+
+\begin{itemize}
+\item Developed system-level code for Actifio storage virtualization appliance.
+\item Worked on b-trees, indexes, garbage collection, on-disk data layout, offsite backup and restore.
+\item Wrote code that sits in the IO path, manipulating data on the fly. This is performance-critical and data-integrity-critical.
+\item Developed high-throughput TCP-based protocol to duplicate data between datacenters.
+\item C++, SUSE Linux.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\textwidth}{X r}
+\textbf{APPIQ, INC. (acquired by HP in 2005)} & Marlborough, MA \\
+Software Engineer , Sr Software Engineer , Principal Software Engineer & 2001-2009 \\
+\end{tabularx}
+
+\begin{itemize}
+\item Led Sustaining Engineering team for 2 years. Handled customer escalations, assigned support cases, monitored progress, worked with support organization and directly with customers. Found ways to make the product easier to support.
+\item Worked with SNIA (Storage Networking Industry Association). Participated in SNIA plugfests. Demonstrated Storage Essentials product at the SNW (Storage Networking World).
+\item Full stack developer for the Storage Essentials Advanced Development team. Helped reengineer Storage Essentials product for scale out, tolerance to SAN problems, and an improved user interface.
+\item Worked on device support for AppIQ Storage Essentials SAN management product. Created storage system provider framework, used by others and myself to create storage system support modules (providers). Mentored new team members.
+\item Java, JBoss, Tomcat, Spring, Windows, SunOS, Red Hat Linux, Oracle.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\textwidth}{X r}
+\textbf{DATA GENERAL CORP.} & Southborough, MA \\
+Software Engineer & 1998-2001 \\
+\end{tabularx}
+
+\begin{itemize}
+\item Developed firmware in x86 assembler and C, debugged on target hardware using in-circuit debuggers, logic analyzers, Ethernet sniffer. Wrote a UDP/IP network stack in assembler.
+\end{itemize}
+
+\vspace{10pt}
+
+\textbf{EDUCATION}
+
+\begin{tabularx}{\textwidth}{X r}
+\textbf{HARVARD UNIVERSITY EXTENSION SCHOOL} & Cambridge, MA \\
+Master of Liberal Arts, Information Technology & 2005 \\
+\end{tabularx}
+
+For master’s thesis, wrote a C compiler front end and code generator.
+
+Was able to parse the entire source code for the Apache web server into an internal representation, convert from internal representation back to C code, then compile it and use the web server.
+
+\begin{tabularx}{\textwidth}{X r}
+\textbf{BOSTON UNIVERSITY} & Boston, MA \\
+Bachelor of Science, Computer Systems Engineering & 1998 \\
+\end{tabularx}
+
+Summa Cum Laude
+
+\end{document}
