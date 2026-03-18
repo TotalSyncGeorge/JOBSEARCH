@@ -1,23 +1,58 @@
-\documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[svgnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
 \usepackage{tabularx}
+\usepackage{array}
 \usepackage{enumitem}
-\setlist[itemize]{leftmargin=*, noitemsep, topsep=2pt}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{ragged2e}
+
 \pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.03}
+\definecolor{accent}{HTML}{12344D}
+\definecolor{textgray}{HTML}{2A2A2A}
+\definecolor{muted}{HTML}{4B5563}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}
+  {0pt}
+  {}
+  [\vspace{2pt}\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+\setlist[itemize]{
+  leftmargin=1.15em,
+  itemsep=2pt,
+  topsep=3pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\newcommand{\resheader}[1]{\section*{#1}\vspace{-4pt}}
+\newcommand{\jobheading}[4]{%
+  \vspace{6pt}\begin{tabularx}{\textwidth}{@{}X r@{}}
+    {\textbf{#1}} & {\textbf{#2}} \\
+    {{\normalsize #3}\hspace{0.5em}{\color{muted}·}\hspace{0.5em}{\color{muted}#4}} & {} \\
+  \end{tabularx}\vspace{2pt}
+}
 
 \begin{document}
 
-\begin{center}
-\textbf{\Large GEORGE TATAR} \\[6pt]
-27 Woodbury Drive \\
-Needham, MA 02494 \\
-(617) 515-9081 \\
-gtatar@tatar-family.com
-\end{center}
+{\centering
+  {\fontsize{20}{22}\selectfont\bfseries GEORGE TATAR}\\[6pt]
+  {\color{textgray}Needham, MA \textbar\ (617) 515-9081 \textbar\ \href{mailto:gtatar@tatar-family.com}{gtatar@tatar-family.com}}\\
+\par}
 
-\vspace{10pt}
-
-\textbf{SKILLS}
+\resheader{SKILLS}
 
 \begin{itemize}
 \item Full stack development of enterprise software. Java, C\#, C, C++, Python, HTML, CSS, JavaScript.
@@ -27,12 +62,9 @@ gtatar@tatar-family.com
 \item Experience writing performance-critical and data-integrity-critical code.
 \end{itemize}
 
-\vspace{10pt}
-
-\textbf{PROJECTS}
+\resheader{PROJECTS}
 
 \textbf{Stack Overflow Tag Recommendation (Machine Learning \& MLOps)}
-
 \begin{itemize}
 \item Built a multi-label text classification system to automatically tag Stack Overflow questions, using transformer-based models (BERT/DistilBERT) and comparing against keyword baselines and logistic regression.
 \item Processed 500k+ questions (BigQuery public dataset) with custom preprocessing to strip HTML, code snippets, and noise; engineered embeddings for scalable training on GPU.
@@ -41,15 +73,9 @@ gtatar@tatar-family.com
 \item Achieved 0.71 micro-F1 vs. 0.32 keyword baseline, demonstrating clear improvements from ML-driven methods.
 \end{itemize}
 
-\vspace{10pt}
+\resheader{EXPERIENCE}
 
-\textbf{EXPERIENCE}
-
-\begin{tabularx}{\textwidth}{X r}
-\textbf{AMDOCS} & Remote \\
-Software Engineer & 2023-present \\
-\end{tabularx}
-
+\jobheading{AMDOCS}{2023-present}{Software Engineer}{Remote}
 \begin{itemize}
 \item Serve as a key contributor to comprehensive automatic mainframe-to-cloud migration toolkit.
 \item Design and implement new features for the conversion tools that automatically rewrite millions of lines of legacy code into functionally equivalent C\# or Java.
@@ -58,13 +84,7 @@ Software Engineer & 2023-present \\
 \item C\#, Java, SQL Server, Oracle, PostgreSQL.
 \end{itemize}
 
-\vspace{6pt}
-
-\begin{tabularx}{\textwidth}{X r}
-\textbf{ZYRLO} & Sudbury, MA \\
-Embedded Software Engineer & 2021-2023 \\
-\end{tabularx}
-
+\jobheading{ZYRLO}{2021-2023}{Embedded Software Engineer}{Sudbury, MA}
 \begin{itemize}
 \item Developed embedded software for assistive devices for visually impaired people.
 \item Integrated Braille IO device in Android apps using JNI, ioctl and custom I2C protocol.
@@ -73,13 +93,7 @@ Embedded Software Engineer & 2021-2023 \\
 \item C/C++, Java, JNI, Raspberry Pi, Bluetooth.
 \end{itemize}
 
-\vspace{6pt}
-
-\begin{tabularx}{\textwidth}{X r}
-\textbf{AKRUTO, INC} & Needham, MA \\
-Founder & 2019-2021 \\
-\end{tabularx}
-
+\jobheading{AKRUTO, INC}{2019-2021}{Founder}{Needham, MA}
 \begin{itemize}
 \item Created AkrutoSync app to sync MS Outlook contacts and calendar with smartphones.
 \item Implemented Microsoft Exchange protocol by reading documentation and observing a real Exchange Server behavior.
@@ -87,13 +101,7 @@ Founder & 2019-2021 \\
 \item C\#, WPF, SQLite database.
 \end{itemize}
 
-\vspace{6pt}
-
-\begin{tabularx}{\textwidth}{X r}
-\textbf{CIMPRESS/VISTAPRINT} & Waltham, MA \\
-Lead Software Engineer & 2013-2019 \\
-\end{tabularx}
-
+\jobheading{CIMPRESS/VISTAPRINT}{2013-2019}{Lead Software Engineer}{Waltham, MA}
 \begin{itemize}
 \item Full-stack development in Linux and Windows environments using C\#, MySQL and deploying to AWS (EC2, RDS, S3, CloudFront).
 \item Implemented low-level integration with a new embroidery machine.
@@ -102,28 +110,16 @@ Lead Software Engineer & 2013-2019 \\
 \item C\#, Microsoft SQL Server, WPF, .NET Core on Ubuntu Linux, MySQL, AWS
 \end{itemize}
 
-\vspace{6pt}
-
-\begin{tabularx}{\textwidth}{X r}
-\textbf{DESKTONE, INC} & Lexington, MA \\
-Engineering Lead & 2012-2013 \\
-\end{tabularx}
-
+\jobheading{DESKTONE, INC}{2012-2013}{Engineering Lead}{Lexington, MA}
 \begin{itemize}
-\item Desktop as a Service product –Virtual Machines as a cloud service using private or public cloud.
+\item Desktop as a Service product --Virtual Machines as a cloud service using private or public cloud.
 \item Converted the product from a single-datacenter system to multi-datacenter. Postgres replication, multi-DC failover and failback. Communication between management nodes across datacenters.
 \item Provided technical leadership for junior team members.
 \item Multi-datacenter distributed system with 3 types of nodes and at least one pair of each type of node in each datacenter for redundancy.
 \item Java, Tomcat, Spring, Hibernate, Ubuntu Linux, PostgreSQL, Python.
 \end{itemize}
 
-\vspace{6pt}
-
-\begin{tabularx}{\textwidth}{X r}
-\textbf{ACTIFIO, INC} & Waltham, MA \\
-Architect & 2009-2012 \\
-\end{tabularx}
-
+\jobheading{ACTIFIO, INC}{2009-2012}{Architect}{Waltham, MA}
 \begin{itemize}
 \item Developed system-level code for Actifio storage virtualization appliance.
 \item Worked on b-trees, indexes, garbage collection, on-disk data layout, offsite backup and restore.
@@ -132,13 +128,7 @@ Architect & 2009-2012 \\
 \item C++, SUSE Linux.
 \end{itemize}
 
-\vspace{6pt}
-
-\begin{tabularx}{\textwidth}{X r}
-\textbf{APPIQ, INC. (acquired by HP in 2005)} & Marlborough, MA \\
-Software Engineer , Sr Software Engineer , Principal Software Engineer & 2001-2009 \\
-\end{tabularx}
-
+\jobheading{APPIQ, INC. (acquired by HP in 2005)}{2001-2009}{Software Engineer , Sr Software Engineer , Principal Software Engineer}{Marlborough, MA}
 \begin{itemize}
 \item Led Sustaining Engineering team for 2 years. Handled customer escalations, assigned support cases, monitored progress, worked with support organization and directly with customers. Found ways to make the product easier to support.
 \item Worked with SNIA (Storage Networking Industry Association). Participated in SNIA plugfests. Demonstrated Storage Essentials product at the SNW (Storage Networking World).
@@ -147,34 +137,21 @@ Software Engineer , Sr Software Engineer , Principal Software Engineer & 2001-20
 \item Java, JBoss, Tomcat, Spring, Windows, SunOS, Red Hat Linux, Oracle.
 \end{itemize}
 
-\vspace{6pt}
-
-\begin{tabularx}{\textwidth}{X r}
-\textbf{DATA GENERAL CORP.} & Southborough, MA \\
-Software Engineer & 1998-2001 \\
-\end{tabularx}
-
+\jobheading{DATA GENERAL CORP.}{1998-2001}{Software Engineer}{Southborough, MA}
 \begin{itemize}
 \item Developed firmware in x86 assembler and C, debugged on target hardware using in-circuit debuggers, logic analyzers, Ethernet sniffer. Wrote a UDP/IP network stack in assembler.
 \end{itemize}
 
-\vspace{10pt}
+\resheader{EDUCATION}
 
-\textbf{EDUCATION}
+\jobheading{HARVARD UNIVERSITY EXTENSION SCHOOL}{2005}{Master of Liberal Arts, Information Technology}{Cambridge, MA}
 
-\begin{tabularx}{\textwidth}{X r}
-\textbf{HARVARD UNIVERSITY EXTENSION SCHOOL} & Cambridge, MA \\
-Master of Liberal Arts, Information Technology & 2005 \\
-\end{tabularx}
-
-For master’s thesis, wrote a C compiler front end and code generator.
+For master's thesis, wrote a C compiler front end and code generator.
 
 Was able to parse the entire source code for the Apache web server into an internal representation, convert from internal representation back to C code, then compile it and use the web server.
 
-\begin{tabularx}{\textwidth}{X r}
-\textbf{BOSTON UNIVERSITY} & Boston, MA \\
-Bachelor of Science, Computer Systems Engineering & 1998 \\
-\end{tabularx}
+\vspace{6pt}
+\jobheading{BOSTON UNIVERSITY}{1998}{Bachelor of Science, Computer Systems Engineering}{Boston, MA}
 
 Summa Cum Laude
 
