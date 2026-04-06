@@ -13,6 +13,24 @@
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{ragged2e}
+\usepackage{etoolbox}
+
+\newcommand{\newflag}[2]{%
+  \newtoggle{#1}%
+  \ifstrequal{#2}{true}{\toggletrue{#1}}{\togglefalse{#1}}%
+}
+\newcommand{\IF}[2]{\iftoggle{#1}{#2}{}}
+\newcommand{\IFNOT}[2]{\iftoggle{#1}{}{#2}}
+\newcommand{\IFELSE}[3]{\iftoggle{#1}{#2}{#3}}
+
+% Flags to include or exclude parts of the resume
+\newflag{TAGLINE}{true}   % if we want a tagline on the resume
+\newflag{SUMMARY}{true}   % if we want a summary block on the resume
+\newflag{SKILLS}{true}    % if we want a skills block on the resume
+
+\newflag{MF}{true}        % if we are targetting mainframe modernization jobs
+\newflag{EMBEDDED}{true}  % if we are targetting firmware/embedded jobs
+\newflag{COMPILER}{true}  % if we are targetting compiler-related jobs
 
 \pagenumbering{gobble}
 \setlength{\parindent}{0pt}
@@ -50,19 +68,21 @@
 
 {\centering
   {\fontsize{21}{23}\selectfont\bfseries GEORGE TATAR}\\[8pt]
-  {\normalsize\color{accent}Software Engineer \textbar\ Distributed Systems, Reliability, Cloud Migration}\\
+  \IF{TAGLINE}{{\normalsize\color{accent}Software Engineer \textbar\ Distributed Systems, Reliability, Cloud Migration\\}}%
   {\normalsize\color{textgray}Needham, MA \textbar\ (617) 515-9081 \textbar\ \href{mailto:gtatar@tatar-family.com}{gtatar@tatar-family.com}}\\
 \par}
 
-\resheader{SKILLS}
+\IF{SKILLS}{%
+  \resheader{SKILLS}
 
-\begin{itemize}
-\item Full stack development of enterprise software. Java, C\#, C, C++, Python, HTML, CSS, JavaScript.
-\item Experience with SQL databases: PostgreSQL, MariaDB, Microsoft SQL Server.
-\item DevOps: micro-services, Docker, Kubernetes, EKS, RDS, S3, CloudFront.
-\item Embedded firmware development for Linux and bare hardware.
-\item Experience writing performance-critical and data-integrity-critical code.
-\end{itemize}
+  \begin{itemize}
+  \item Full stack development of enterprise software. Java, C\#, C, C++, Python, HTML, CSS, JavaScript.
+  \item Experience with SQL databases: PostgreSQL, MariaDB, Microsoft SQL Server.
+  \item DevOps: micro-services, Docker, Kubernetes, EKS, RDS, S3, CloudFront.
+  \item Embedded firmware development for Linux and bare hardware.
+  \item Experience writing performance-critical and data-integrity-critical code.
+  \end{itemize}
+}%
 
 \resheader{EXPERIENCE}
 
