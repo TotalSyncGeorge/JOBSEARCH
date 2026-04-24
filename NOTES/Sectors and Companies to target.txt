@@ -1,0 +1,8 @@
+These all reliably pay $180K+ base or TC for Principal/Staff/Architect IC, hire faster than FAANG, and actively want the experience pattern on your resume:
+
+* Enterprise infra / storage vendors: NetApp, Pure Storage, Dell/EMC, HPE, Cohesity, Rubrik, Commvault, Veeam. Actifio + AppIQ is a bullseye.
+* Cloud migration / modernization shops: Accenture, Deloitte, Capgemini, EPAM, Thoughtworks, AWS/Azure/GCP professional services. Your current Amdocs role is exactly what they sell.
+* Mid-market B2B tech in Boston / remote: HubSpot, Klaviyo, Toast, MongoDB, DataRobot, Akamai, PTC, iRobot, Formlabs, Datadog (Boston office), Snowflake (remote).
+* Boston fintech / insurance: Fidelity, Wellington, State Street, Liberty Mutual, MassMutual. They pay Principal ICs well and value systems depth over leetcode.
+* Defense / research: MITRE, Draper, Raytheon BBN, Lincoln Labs. Compiler thesis + storage + distributed systems plays well.
+* Private-equity-owned modernization plays: lots of these in 2026, rarely advertised as FAANG-tier but routinely at $180–250K for senior ICs.
