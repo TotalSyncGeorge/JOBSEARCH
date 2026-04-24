@@ -1,0 +1,70 @@
+Under "speed to 180K+ offer," legacy .NET modernization is arguably your fastest lane, not slowest:
+
+Open roles at any time: MF: ~hundreds; DOTNET: ~thousands
+Employer concentration: MF: Amdocs, Mechanical Orchard, Modern Systems/Advanced, Heirloom, AWS MFM, IBM; DOTNET: enormous, spread across consultancies + enterprises + hyperscalers
+
+================
+Prompt: Tell me about .NET modernization. I only considered Mainframe modernization.
+================
+
+The consultancies (EPAM, Accenture, Deloitte, Capgemini, Cognizant, Slalom, HCL, Infosys, TCS) run large modernization practices and have constant demand for principal/lead engineers who know both sides: legacy .NET Framework / WCF / IIS / SQL Server and the target stack (.NET Core, AWS, Kubernetes). That dual-fluency is rare and commands $180-250K+ at principal/lead titles. Interview loops are usually shorter than FAANG-tier.
+
+Enterprise modernization roles direct-hire (fintech, insurance, healthcare, defense primes) — same story. They specifically want someone who can read a WCF/WPF/.NET Framework monolith and architect its replacement.
+
+Your Amdocs job is literally this lane. You're not an outsider to it; you're currently doing it.
+
+Competitive field is thinner. Fewer candidates combine 25 years of Microsoft-stack fluency with real cloud-native delivery (Cimpress: .NET Core on EKS, CloudFormation, microservices). Most modernization candidates have one side or the other, not both.
+
+FAANG/cloud-native principal IC is a slower lane for you because (a) design interviews skew toward very-high-scale distributed systems patterns you haven't recently been measured on, (b) comp bands are higher but loops are longer and hit rates lower, and (c) your storage-internals pedigree (Actifio) is strong but dated.
+
+================
+
+Good instinct to check. Mainframe modernization is a niche; .NET modernization is a much larger adjacent market where your profile is arguably stronger, and most of the same transferable skills apply. Here's the honest map:
+
+What the work actually is
+Large enterprises have tens of millions of lines of .NET Framework code (often 15-25 years old) that they need to get off aging Windows Server data centers. The typical migration patterns:
+
+.NET Framework 4.x → .NET 8/9 (cross-platform, Linux-friendly)
+WCF → gRPC or ASP.NET Core Web API / REST
+WebForms / WinForms / WPF → Blazor, React, or Angular SPAs
+IIS on Windows Server → Kestrel in containers on Linux, typically Kubernetes
+SQL Server on-prem → Azure SQL / AWS RDS / PostgreSQL (the last one for license-cost reasons)
+Forms Auth / WS-Fed / WIF → OAuth 2.0 / OIDC (you literally did this at Akruto for Microsoft 365)
+Monolith → microservices (you did this at Cimpress)
+Why there's real budget: Windows Server 2012/2016 end-of-support cycles, board-level cloud mandates, SQL Server / Windows licensing cost pressure, and the inability to hire new grads who know WebForms or WCF.
+
+Who hires, and at what comp
+Consultancies — the biggest bucket, and likely your fastest path:
+
+Avanade (Microsoft-Accenture JV) — the single most targeted match for your profile. .NET-heavy by mandate. Principal Consultant / Senior Principal titles, typically $180-240K base + bonus, mostly remote in the US.
+Accenture, Deloitte, EY Consulting, IBM Consulting — principal/senior manager IC tracks hit $200-260K total.
+Slalom, EPAM, Endava, Thoughtworks, GlobalLogic — mid-tier, $180-230K for principal ICs, often remote.
+Capgemini, Cognizant, TCS, Infosys, HCL, Wipro — hire volume but tend to downlevel; negotiate hard or pass.
+Microsoft Partner boutiques — Improving, West Monroe, Pariveda, Centric, 10th Magnitude (now Cognizant), Neudesic (now IBM). Smaller but less bureaucratic.
+Hyperscaler migration practices:
+
+AWS Professional Services has a formal ".NET on AWS" practice (they built the Porting Assistant for .NET). Principal Consultant roles ~$220-280K total (base + stock). This is probably your single best-fit direct application given your AWS depth.
+Azure Migrate / FastTrack / CSU at Microsoft — same idea, Azure side. $200-280K total.
+Enterprise direct-hire — principal/staff to lead internal modernization:
+
+Financial services (brokerages, insurers, banks) — massive .NET footprints, $200-260K base + bonus. Fidelity, State Street, MassMutual, Liberty Mutual — all in your backyard.
+Healthcare payers/EMRs, retail, manufacturing (Cimpress-adjacent), utilities.
+Defense primes — clearance premium of $20-40K, but requires TS/Secret which you don't have.
+ISVs selling modernization tooling:
+
+vFunction (monolith decomposition, .NET + Java), Mechanical Orchard (mainframe-primary but expanding), various smaller — startup equity + $180-220K base, potentially interesting if you like tooling work (you do, based on Amdocs).
+How your background actually maps
+Strong signals (rare to find in one candidate):
+
+Akruto is a textbook .NET Framework + WCF + IIS + WPF + modern-auth migration story — exactly the "from" state every enterprise is trying to escape.
+Cimpress is the textbook "to" story: .NET monolith → .NET Core microservices on AWS EKS with CloudFormation IaC and OAuth 2.0 / Auth0. That's a complete modernization case study.
+Amdocs shows you can lead code-conversion work at scale.
+Compiler thesis + 25-year Microsoft-stack depth = credible "can reason about source-to-source transformation" story, which matters for tooling-heavy modernization roles.
+Player-coach profile (8-engineer lead at Cimpress) is what consultancies pay premium for.
+Honest weak spots:
+
+No Azure on resume. Many .NET modernization JDs default to Azure; AWS is a narrower subset. Not fatal, but narrows the Avanade/Microsoft pipelines.
+Cimpress modernization work is 2013-2019. Seven-plus years old. You need to make sure the Amdocs bullets surface current-era .NET/containers/cloud work, or it reads dated.
+No explicit Blazor, gRPC, ASP.NET Core MVC, OpenTelemetry, service-mesh tokens. Probably touched some of these; they're not on the page.
+Your strongest modernization narrative is diluted. The resume currently sells "distributed systems generalist across storage, cloud, and mainframe." For this lane you'd want to sharpen the "I migrate legacy .NET to cloud-native .NET Core at scale" story.
+
