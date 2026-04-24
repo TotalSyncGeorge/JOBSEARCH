@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-\usepackage[letterpaper,margin=0.68in]{geometry}
+\usepackage[letterpaper,margin=0.6in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{tgheros}
@@ -68,14 +68,14 @@
 
 {\centering
   {\fontsize{21}{23}\selectfont\bfseries GEORGE TATAR}\\[8pt]
-  \IF{TAGLINE}{{\normalsize\color{accent}Principal-level software engineer \textbar\ 25 years in distributed systems, storage, and cloud migration\\}}%
+  \IF{TAGLINE}{{\normalsize\color{accent}Architect / Principal Engineer \textbar\ 25 years in distributed systems, storage, and cloud migration\\}}%
   {\normalsize\color{textgray}Needham, MA \textbar\ (617) 515-9081 \textbar\ \href{mailto:gtatar@tatar-family.com}{gtatar@tatar-family.com}}\\
 \par}
 
 \IF{SUMMARY}{%
   \resheader{SUMMARY}
 
-  Hands-on IC across cloud migration, distributed systems, and storage internals. Recent work: automated mainframe-to-cloud code conversion at Amdocs; led an 8-engineer team migrating a .NET monolith to AWS microservices running 5 global factories at Cimpress; storage-virtualization data-path internals (b-trees, GC, cross-DC replication) at Actifio.
+  Hands-on architect and principal engineer with 25 years building systems where correctness and performance matter. Recent work: automated mainframe-to-cloud code conversion at Amdocs {\color{accent}\,\textbullet\,}\ tech lead for an 8-engineer team migrating a .NET monolith to AWS microservices running 5 global factories at Cimpress {\color{accent}\,\textbullet\,}\ storage-virtualization data-path internals (b-trees, GC, on-disk layout, cross-DC replication) at Actifio.
 }%
 
 \IF{SKILLS}{%
@@ -97,17 +97,15 @@
 \jobheading{AMDOCS}{2023-present}{\IFELSE{MF}{Mainframe Modernization Engineer}{Cloud Migration Engineer, Platform \& Tooling}}{Remote}
 \begin{itemize}
 \item Architect and implement core components of an automated mainframe-to-cloud migration platform.
-\item Build code conversion tools that transform millions of lines of legacy \IF{MF}{COBOL, JCL, and CICS }applications into functionally equivalent C\# or Java systems.
-\item Develop ETL tooling to migrate schemas and data from legacy databases\IF{MF}{ (DB2, ADABAS, IDMS)} to modern SQL platforms such as SQL Server, Oracle, and PostgreSQL.
-\item Develop Java and C\# compatibility libraries that emulate mainframe features on Linux and Windows.
-%\item Designed the containerized runtime platform for migrated workloads, packaging converted C\# and Java services with Docker and deploying them to Kubernetes on Amazon EKS.
+\item Build code conversion tools that transform legacy \IF{MF}{COBOL, JCL, and CICS }applications into functionally equivalent C\# or Java systems; platform has converted $\sim$X MLOC across Y customer engagements.
+\item Develop ETL tooling to migrate schemas and data from legacy databases\IF{MF}{ (DB2, ADABAS, IDMS)} to modern SQL platforms (SQL Server, Oracle, PostgreSQL), plus Java and C\# compatibility libraries that emulate mainframe features on Linux and Windows.
 \item C\#, Java, SQL Server, Oracle, PostgreSQL.
 \end{itemize}
 
 \jobheading{ZYRLO}{2021-2023}{Software Architect}{Sudbury, MA}
 \begin{itemize}
 \item Defined the software architecture and implemented core system components for an assistive device for visually impaired users.
-\item Built the software stack around a CM4 controller (Ubuntu Core), an SD410/Android subsystem for braille and accessibility, and ESP32 firmware --- including custom protocols, Bluetooth, Android integration, and Linux drivers.
+\item Built the stack around a CM4 controller (Ubuntu Core), an SD410/Android subsystem for braille and accessibility, and ESP32 firmware --- including custom protocols, Bluetooth, Android integration, and Linux drivers.
 \item Worked with hardware engineers on schematic reviews, board bring-up, bootloader configuration, and driver integration.
 \item C, C++, Python, Ubuntu Core, Android, Bluetooth, device drivers.
 \end{itemize}
@@ -121,8 +119,8 @@
 
 \jobheading{CIMPRESS/VISTAPRINT}{2013-2019}{Lead Software Engineer}{Waltham, MA}
 \begin{itemize}
-\item Led an 8-engineer team within a 1,000-engineer organization in a company-wide initiative to migrate a legacy .NET/WPF/SQL Server monolith to a modern REST/JSON microservices architecture on AWS (.NET Core on Ubuntu, MariaDB).
-\item Architected the microservices for our team's domains and developed mission-critical software driving end-to-end operations across 5 global factories (order processing, production scheduling, supply chain, worker shifts, shipping).
+\item Tech lead for an 8-engineer team within a 1,000-engineer org; architected and drove a company-wide migration of a legacy .NET/WPF/SQL Server monolith to $\sim$X REST/JSON microservices on AWS (.NET Core on Ubuntu, MariaDB).
+\item Designed and built mission-critical microservices driving end-to-end operations across 5 global factories --- consumer order processing, production scheduling, supply chain, worker shifts, and shipping --- handling $\sim$Y orders/day.
 \item Owned the full lifecycle of these services from design through DevOps: CI/CD pipelines, YAML CloudFormation across EC2/RDS/S3/CloudFront, then containerization with Docker and migration onto Amazon EKS with rolling updates and horizontal autoscaling.
 \item Owned direct integration with new manufacturing equipment (commercial digital presses, embroidery machines) and drove adoption of OAuth 2.0 with Auth0 across the new microservices.
 \end{itemize}
@@ -130,22 +128,22 @@
 \jobheading{DESKTONE, INC}{2012-2013}{Engineering Lead}{Lexington, MA}
 \begin{itemize}
 \item Engineering lead for a Desktop-as-a-Service product delivering virtual machines through private and public cloud.
-\item Led the conversion from a single-datacenter system to a redundant multi-datacenter architecture (pairs of each node type per DC) including PostgreSQL replication, cross-DC communication, and failover/failback.
+\item Designed and led the conversion from a single-datacenter system to a redundant multi-datacenter architecture (pairs of each node type per DC) including PostgreSQL replication, cross-DC communication, and failover/failback.
 \item Java, Tomcat, Spring, Hibernate, Ubuntu Linux, PostgreSQL, Python.
 \end{itemize}
 
 \jobheading{ACTIFIO, INC}{2009-2012}{Architect}{Waltham, MA}
 \begin{itemize}
 \item Architected and developed system-level components for Actifio's storage virtualization appliance.
-\item Designed core data-path subsystems including b-trees, indexes, garbage collection, on-disk data layout, and offsite backup and restore.
-\item Built code in the block-IO path, where correctness of every IO and sub-millisecond latency were hard requirements.
-\item Designed a high-throughput TCP-based protocol to duplicate data between datacenters.
+\item Designed core data-path subsystems: b-trees, indexes, garbage collection, on-disk data layout, and offsite backup and restore.
+\item Built code in the block-IO path, where correctness of every IO and sub-millisecond latency (p99 $<$ X $\mu$s) were hard requirements.
+\item Designed a high-throughput TCP-based protocol to duplicate data between datacenters, sustaining $\sim$Y GB/s.
 \item C++, SUSE Linux, Fibre Channel, iSCSI, SAN.
 \end{itemize}
 
 \jobheading{APPIQ, INC. (acquired by HP in 2005)}{2001-2009}{Software Engineer to Principal Software Engineer}{Marlborough, MA}
 \begin{itemize}
-\item Built Storage Essentials SAN management product: storage system provider framework, device support providers, and Advanced Development work on scale-out and SAN fault tolerance. Led Sustaining Engineering team for 2 years handling customer escalations.
+\item Built Storage Essentials SAN management product: storage system provider framework, device-support providers, and Advanced Development work on scale-out and SAN fault tolerance. Led Sustaining Engineering for 2 years handling customer escalations, and represented the product at SNIA plugfests and SNW.
 \item Java, JBoss, Tomcat, Spring, Oracle, SMI-S, Fibre Channel, iSCSI, SAN.
 \end{itemize}
 
