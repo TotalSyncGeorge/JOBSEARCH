@@ -119,8 +119,8 @@
 
 \jobheading{CIMPRESS/VISTAPRINT}{2013-2019}{Lead Software Engineer}{Waltham, MA}
 \begin{itemize}
-\item Tech lead for an 8-engineer team within a 1,000-engineer org; architected and drove a company-wide migration of a legacy .NET/WPF/SQL Server monolith to $\sim$X REST/JSON microservices on AWS (.NET Core on Ubuntu, MariaDB).
-\item Designed and built mission-critical microservices driving end-to-end operations across 5 global factories --- consumer order processing, production scheduling, supply chain, worker shifts, and shipping --- handling $\sim$Y orders/day.
+\item Tech lead for an 8-engineer team within a 1,000-engineer org; architected and drove a company-wide migration of a legacy .NET/WPF/SQL Server monolith to $\sim$70 REST/JSON microservices on AWS (.NET Core on Ubuntu, MariaDB).
+\item Designed and built mission-critical microservices driving end-to-end operations across 5 global factories --- consumer order processing, production scheduling, supply chain, worker shifts, and shipping --- handling $\sim$200{,}000 orders/day at peak.
 \item Owned the full lifecycle of these services from design through DevOps: CI/CD pipelines, YAML CloudFormation across EC2/RDS/S3/CloudFront, then containerization with Docker and migration onto Amazon EKS with rolling updates and horizontal autoscaling.
 \item Owned direct integration with new manufacturing equipment (commercial digital presses, embroidery machines) and drove adoption of OAuth 2.0 with Auth0 across the new microservices.
 \end{itemize}
@@ -136,8 +136,8 @@
 \begin{itemize}
 \item Architected and developed system-level components for Actifio's storage virtualization appliance.
 \item Designed core data-path subsystems: b-trees, indexes, garbage collection, on-disk data layout, and offsite backup and restore.
-\item Built code in the block-IO path, where correctness of every IO and sub-millisecond latency (p99 $<$ X $\mu$s) were hard requirements.
-\item Designed a high-throughput TCP-based protocol to duplicate data between datacenters, sustaining $\sim$Y GB/s.
+\item Built code in the block-IO path, where correctness of every IO and sub-millisecond latency (p99 $<$ 300 $\mu$s) were hard requirements.
+\item Designed a high-throughput TCP-based protocol to duplicate data between datacenters, sustaining $\sim$8 GB/s.
 \item C++, SUSE Linux, Fibre Channel, iSCSI, SAN.
 \end{itemize}
 
