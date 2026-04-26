@@ -1,0 +1,10 @@
+---
+description: Search and edit only under current workspace root(s); do not use parent trees
+alwaysApply: true
+---
+
+# Resume scope (this workspace)
+
+- Treat the **root folder(s) of the current workspace** as the only in-scope file tree. Use **paths under those project roots** for reads, search, and edits.
+- **Do not** use tools to scan, search, or modify directories **outside** the workspace roots (for example, a parent directory that also contains other clones or copy folders). If something might exist outside the tree, **say so in chat** and let the user open or paste it.
+
