@@ -1,0 +1,25 @@
+Each role on this resume has a job in the story
+
+Role
+What it proves
+How it proves it
+
+Amdocs (current)
+Modernization, codegen, recent relevance
+Tooling & scale of conversion
+
+Cimpress
+Org-level transformation, cloud migration, breadth of ownership
+Scope & decomposition numbers
+
+Actifio
+Deep technical chops as an architect
+µs latency, GB/s throughput, b-trees
+
+Desktone
+Distributed-systems failure design
+Multi-DC redundancy
+
+Akruto / Zyrlo / AppIQ
+Range, founder ownership, embedded
+Project descriptions
