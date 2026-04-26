@@ -1,0 +1,156 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}
+\usepackage[svgnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+
+\newcommand{\newflag}[2]{%
+  \newtoggle{#1}%
+  \ifstrequal{#2}{true}{\toggletrue{#1}}{\togglefalse{#1}}%
+}
+\newcommand{\IF}[2]{\iftoggle{#1}{#2}{}}
+\newcommand{\IFNOT}[2]{\iftoggle{#1}{}{#2}}
+\newcommand{\IFELSE}[3]{\iftoggle{#1}{#2}{#3}}
+
+% Flags to include or exclude parts of the resume
+\newflag{TAGLINE}{true}   % if we want a tagline on the resume
+\newflag{SUMMARY}{true}   % if we want a summary block on the resume
+\newflag{SKILLS}{true}    % if we want a skills block on the resume
+
+\newflag{MF}{true}        % if we are targetting mainframe modernization jobs
+\newflag{EMBEDDED}{true}  % if we are targetting firmware/embedded jobs
+\newflag{COMPILER}{true}  % if we are targetting compiler-related jobs
+
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.05}
+\definecolor{accent}{HTML}{0F2740}
+\definecolor{textgray}{HTML}{222222}
+\definecolor{muted}{HTML}{4B5563}
+
+\titleformat{\section}
+  {\Large\bfseries\color{accent}}
+  {}
+  {0pt}
+  {}
+  [\vspace{3pt}{\color{accent}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+\setlist[itemize]{
+  leftmargin=1.2em,
+  itemsep=2pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\newcommand{\resheader}[1]{\section*{#1}\vspace{-4pt}}
+\newcommand{\jobheading}[4]{%
+  \vspace{4pt}\begin{tabularx}{\textwidth}{@{}X r@{}}
+    {\textbf{#1}} & {\textbf{#2}} \\
+    {{\normalsize #3}\hspace{0.5em}{\color{muted}·}\hspace{0.5em}{\color{muted}#4}} & {} \\
+  \end{tabularx}\vspace{0pt}
+}
+
+\begin{document}
+
+{\centering
+  {\fontsize{21}{23}\selectfont\bfseries JOHN DOE}\\[8pt]
+  \IF{TAGLINE}{{\normalsize\color{accent}Architect / Principal Engineer \textbar\ 25 years in distributed systems, storage, and cloud migration\\}}%
+  {\normalsize\color{textgray}Burlington, MA \textbar\ (617) 555-5555 \textbar\ \href{mailto:sample@domain.com}{sample@domain.com}}\\
+\par}
+
+\IF{SUMMARY}{%
+  \resheader{SUMMARY}
+
+  Hands-on architect and principal engineer with 25 years building systems where correctness and performance matter. Recent work: automated mainframe-to-cloud code conversion at Amdocs {\color{accent}\,\textbullet\,}\ tech lead for an 8-engineer team migrating a .NET monolith to AWS microservices running 5 global factories at Cimpress {\color{accent}\,\textbullet\,}\ storage-virtualization data-path internals (b-trees, GC, on-disk layout, cross-DC replication) at Actifio.
+}%
+
+\IF{SKILLS}{%
+  \resheader{SKILLS}
+
+  \begin{itemize}
+  \IFNOT{SUMMARY}{\item Principal/Staff IC across distributed systems, storage, cloud platforms, and legacy modernization.}%
+  \item Backend \& systems: Java, C\#, C++, C, Python --- performance-critical and data-integrity-critical code.
+  \item Cloud \& distributed: AWS (EC2, RDS, S3, CloudFront, CloudFormation, EKS), Kubernetes, Docker, microservices, REST, OAuth 2.0.
+  \item Databases: PostgreSQL, Microsoft SQL Server, Oracle, MariaDB; SQL and ETL tooling.
+  \item Frameworks \& runtimes: .NET Core, .NET Framework, Spring, Tomcat, Hibernate.
+  \item Systems \& embedded: Linux, firmware, device drivers, Android, Bluetooth.
+  \item Also: JavaScript, HTML, CSS, \IF{MF}{COBOL, JCL, DB2, CICS,} SAN, iSCSI, Fibre Channel, JSON, YAML, CI/CD.
+  \end{itemize}
+}%
+
+\resheader{EXPERIENCE}
+
+\jobheading{AMDOCS}{2023-present}{\IFELSE{MF}{Mainframe Modernization Engineer}{Cloud Migration Engineer, Platform \& Tooling}}{Remote}
+\begin{itemize}
+\item Architect and implement core components of an automated mainframe-to-cloud migration platform.
+\item Build code conversion tools that transform legacy \IF{MF}{COBOL, JCL, and CICS }applications into functionally equivalent C\# or Java systems; platform has converted $\sim$X MLOC across Y customer engagements.
+\item Develop ETL tooling to migrate schemas and data from legacy databases\IF{MF}{ (DB2, ADABAS, IDMS)} to modern SQL platforms (SQL Server, Oracle, PostgreSQL), plus Java and C\# compatibility libraries that emulate mainframe features on Linux and Windows.
+\item C\#, Java, SQL Server, Oracle, PostgreSQL.
+\end{itemize}
+
+\jobheading{ZYRLO}{2021-2023}{Software Architect}{Sudbury, MA}
+\begin{itemize}
+\item Defined the software architecture and implemented core system components for an assistive device for visually impaired users.
+\item Built the stack around a CM4 controller (Ubuntu Core), an SD410/Android subsystem for braille and accessibility, and ESP32 firmware --- including custom protocols, Bluetooth, Android integration, and Linux drivers.
+\item Worked with hardware engineers on schematic reviews, board bring-up, bootloader configuration, and driver integration.
+\item C, C++, Python, Ubuntu Core, Android, Bluetooth, device drivers.
+\end{itemize}
+
+\jobheading{AKRUTO, INC}{2019-2021}{Founder}{Needham, MA}
+\begin{itemize}
+\item Founded and operated AkrutoSync, a commercial Windows product that synchronized Microsoft Outlook contacts and calendars with smartphones for paying customers.
+\item Reimplemented Microsoft Exchange synchronization protocols from documentation and observed server behavior, including SOAP/XML message handling and OAuth 2.0 for Microsoft 365 modern authentication.
+\item Built the sync engine (C\#/WPF, .NET Framework, SQLite), customer-facing website, and license/auto-update service, driven by a CI/CD pipeline for automated releases.
+\end{itemize}
+
+\jobheading{CIMPRESS/VISTAPRINT}{2013-2019}{Lead Software Engineer}{Waltham, MA}
+\begin{itemize}
+\item Tech lead for an 8-engineer team within a 1,000-engineer org; architected and drove a company-wide migration of a legacy .NET/WPF/SQL Server monolith to $\sim$70 REST/JSON microservices on AWS (.NET Core on Ubuntu, MariaDB).
+\item Designed and built mission-critical microservices driving end-to-end operations across 5 global factories --- consumer order processing, production scheduling, supply chain, worker shifts, and shipping --- handling $\sim$200{,}000 orders/day at peak.
+\item Owned the full lifecycle of these services from design through DevOps: CI/CD pipelines, YAML CloudFormation across EC2/RDS/S3/CloudFront, then containerization with Docker and migration onto Amazon EKS with rolling updates and horizontal autoscaling.
+\item Owned direct integration with new manufacturing equipment (commercial digital presses, embroidery machines) and drove adoption of OAuth 2.0 with Auth0 across the new microservices.
+\end{itemize}
+
+\jobheading{DESKTONE, INC}{2012-2013}{Engineering Lead}{Lexington, MA}
+\begin{itemize}
+\item Engineering lead for a Desktop-as-a-Service product delivering virtual machines through private and public cloud.
+\item Designed and led the conversion from a single-datacenter system to a redundant multi-datacenter architecture (pairs of each node type per DC) including PostgreSQL replication, cross-DC communication, and failover/failback.
+\item Java, Tomcat, Spring, Hibernate, Ubuntu Linux, PostgreSQL, Python.
+\end{itemize}
+
+\jobheading{ACTIFIO, INC}{2009-2012}{Architect}{Waltham, MA}
+\begin{itemize}
+\item Architected and developed system-level components for Actifio's storage virtualization appliance.
+\item Designed core data-path subsystems: b-trees, indexes, garbage collection, on-disk data layout, and offsite backup and restore.
+\item Built code in the block-IO path, where correctness of every IO and sub-millisecond latency (p99 $<$ 300 $\mu$s) were hard requirements.
+\item Designed a high-throughput TCP-based protocol to duplicate data between datacenters, sustaining $\sim$8 GB/s.
+\item C++, SUSE Linux, Fibre Channel, iSCSI, SAN.
+\end{itemize}
+
+\jobheading{APPIQ, INC. (acquired by HP in 2005)}{2001-2009}{Software Engineer to Principal Software Engineer}{Marlborough, MA}
+\begin{itemize}
+\item Built Storage Essentials SAN management product: storage system provider framework, device-support providers, and Advanced Development work on scale-out and SAN fault tolerance. Led Sustaining Engineering for 2 years handling customer escalations, and represented the product at SNIA plugfests and SNW.
+\item Java, JBoss, Tomcat, Spring, Oracle, SMI-S, Fibre Channel, iSCSI, SAN.
+\end{itemize}
+
+\resheader{EDUCATION}
+
+\jobheading{HARVARD UNIVERSITY EXTENSION SCHOOL}{2005}{Master of Liberal Arts, Information Technology}{Cambridge, MA}
+
+Master's thesis: C compiler front end and code generator able to round-trip the full Apache web server source (C $\to$ internal representation $\to$ C), then compile and run it.
+
+\end{document}
