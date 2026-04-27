@@ -1,0 +1,56 @@
+Why this is the biggest remaining lever
+Staff / Principal / Architect screens are ranking problems, not threshold problems. The hiring manager has a stack of 40 resumes of 15–25 YOE senior engineers, and most of them say some version of "architected microservices on AWS" and "led migration from monolith." Yours currently reads like that pile. Quantified scope is what moves you out of the pile into the top 5, because it's the one dimension where candidates actually differ:
+
+Scale. 5 orders/day vs. 500,000 orders/day is two different jobs. A hiring manager for a 100M-request/day system wants evidence you've operated at or near that scale.
+Depth. Sub-millisecond latency and p99 numbers differentiate "built a service" from "built a hot-path service."
+Impact. $ saved, $ handled, uptime improved — turns "I did work" into "the work mattered."
+Credibility stress test. When a screen asks "how many requests/sec?" and you answer "I don't actually know" — you just lost the round. Committing numbers to the resume forces you to know your own story, which helps in interviews even more than on the page.
+One caveat to stay honest with you: referrals are a higher overall lever than any resume edit. Metrics are the highest-leverage edit inside the resume. If you're not also running a parallel referral push through your Actifio / Cimpress / Desktone / AppIQ network, the resume work has a ceiling.
+
+What I'd want, per role
+Don't feel obligated to supply all of these. Anything you can pin down will help. Rough numbers are fine — "about", "roughly", "north of X" are all recruiter-readable.
+
+Amdocs (current — highest priority to quantify)
+Size of the largest migration you've touched: LOC of COBOL/JCL/CICS input, number of programs, number of DB2/IDMS tables, number of schemas.
+Throughput of your conversion platform: lines/hour or lines/day processed; how long a typical customer job takes end-to-end.
+Breadth: how many source technologies you convert from (COBOL, JCL, CICS, ADABAS, IDMS, DB2 — the list); how many target languages (C# and Java).
+Fidelity: if there's any test-pass-rate or functional-equivalence metric, that's gold.
+Customer count or named customers you can reference without NDA issues.
+Cimpress (second priority — the story is strong, numbers would make it great)
+Orders/day or orders/year processed by the services you owned (factory operations are inherently high-volume — this should be a big number).
+Revenue / GMV flowing through the services you ran ("services handled $XXX M in annual consumer orders").
+RPS / QPS on the microservices at peak.
+Uptime (was there an SLA — 99.9, 99.95, 99.99?).
+Number of microservices your team owned.
+LOC or service count decomposed out of the monolith.
+Deployment cadence after the migration (deploys/day vs. the monthly/quarterly cadence of the monolith world).
+Factory-level KPIs touched (units shipped/day across 5 factories, manufacturing equipment count integrated).
+Actifio (third priority — differentiator for storage/infra targets)
+IO latency: p50/p99 targets or achieved numbers in microseconds/milliseconds.
+Throughput of the cross-DC replication protocol: GB/s or Gbps.
+Scale: data volume managed per appliance (TB, PB), number of customer deployments.
+B-tree / index scale: rough number of entries, depth, or lookup latency if you remember.
+Dedupe or compression ratio if your subsystems contributed to it.
+Lower priority (add only if easy)
+Zyrlo: did the product ship? Units? Firmware footprint? Battery life? Even "first production release of X" is a milestone metric.
+Akruto: paying customer count, years in operation, MRR or revenue only if you're comfortable sharing it in an interview. "Thousands of paying customers" is defensible and not-too-revealing.
+Desktone: VMs managed, failover time achieved. Mostly not worth the real estate.
+AppIQ: skip. Too old to earn the space.
+How to handle numbers you don't have or can't share
+Different tactics, in order of preference:
+
+Specific but approximate. "~3M LOC of COBOL migrated across 4 customer engagements" beats "millions of lines of COBOL across multiple engagements."
+Order-of-magnitude bands. "tens of millions of annual orders", "hundreds of microservices", "sub-100µs p99." These are defensible without revealing confidential specifics.
+Scope substitutes for outcome. If you don't have throughput numbers for Actifio, the fact that it was a production storage appliance processing customer block IO is itself a scale claim — just make it crisp ("primary-path block IO for enterprise SAN deployments").
+Dollar-relative without disclosure. "revenue-critical path" or "mission-critical production path" is weaker than "$X M/yr" but better than nothing.
+Last resort — cut the bullet. A bullet with no scope claim and no metric is often deletable with no signal loss.
+What not to do
+Don't invent. If a screen probes "how did you measure 99.99?" and you can't answer in 30 seconds, the round is over. No number beats a wrong one.
+Don't pad with vanity metrics. "Wrote 50,000 lines of code" is a negative signal at Principal level. "Reviewed 500 PRs" same. Keep metrics to scope (size of system) and outcome (what improved).
+Don't stack too many numbers per bullet. One scope-or-outcome number per bullet, max two. Three+ reads as a brag dump and people stop parsing.
+Concrete next step
+If you want, drop numbers into a short bullet list — format like:
+
+Amdocs: largest migration ~X MLOC, ~Y programs; converts ~Z LOC/hour; customers A/B/C
+Cimpress: peak ~X orders/day across 5 factories; ~Y microservices owned; SLA 99.Z
+Actifio: p99 IO ~X µs; replication ~Y GB/s; appliance capacity ~Z TB

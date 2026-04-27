@@ -1,0 +1,26 @@
+For an Architect/Principal IC resume, the useful numbers are the ones that prove system scale, technical difficulty, and organizational leverage.
+
+
+---
+
+The best metrics to add are these:
+
+AMDOCS: size of the migration problem and how much automation you created. Best candidates are number of applications/programs converted, number of batch jobs/tables/schemas handled, automation coverage, migration time or effort reduced, or number of customer programs/teams using the tooling.
+
+CIMPRESS: one more operational outcome metric would help, but this section is already strong. Best candidates are order volume, deployment frequency, lead-time improvement, number of services you directly owned, or reliability/incident reduction. 1,000-engineer organization is weaker than workload or platform impact, so don’t lean harder on org-size metrics.
+
+∴ DESKTONE: this most needs numbers. Add number of datacenters, tenants/desktops/VMs, failover objectives like RTO/RPO, or how often failover was tested.
+
+AKRUTO: if you keep the founder role, quantify traction so it does not read like a side project. Best candidates are paying customers, downloads, renewal rate, sync volume, revenue range, support volume, or release cadence.
+
+ZYRLO: hardware/embedded roles are harder to quantify, but at least one scope metric would help. Good options are number of subsystems/interfaces owned, prototypes or pilot units, board bring-up milestones, boot time, latency, battery life, or time to first integrated demo.
+
+ACTIFIO: already excellent. Only add another number if it is genuinely strong, like data volume protected, node count, or appliance scale.
+
+∴ APPIQ: quantify supported vendor/device breadth, customer scale, or support/escalation impact.
+The rule I’d use is: prefer metrics that show your architectural leverage, not generic context. services, factories, latency, throughput, datacenters, customers, schemas, applications, and RTO/RPO are high-value. Extra team-size numbers, vague percentages, or company vanity scale are low-value.
+
+
+If time is limited, I’d do this first: replace the stack-only bullets in AMDOCS, ZYRLO, DESKTONE, and APPIQ with one quantified impact bullet each. That will move the resume more than sprinkling extra numbers into sections that are already strong.
+
+If you want, I can go through BaseResume/GeorgeTatar.tex and mark the exact bullets that should be rewritten with metric placeholders.
