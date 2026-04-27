@@ -68,14 +68,15 @@
 
 {\centering
   {\fontsize{21}{23}\selectfont\bfseries GEORGE TATAR}\\[8pt]
-  \IF{TAGLINE}{{\normalsize\color{accent}Principal-level software engineer \textbar\ 25 years in distributed systems, storage, and cloud migration\\}}%
+  \IF{TAGLINE}{{\normalsize\color{accent}Principal-level software engineer \textbar\ modernization, distributed systems, storage, and cloud migration\\}}%
   {\normalsize\color{textgray}Needham, MA \textbar\ (617) 515-9081 \textbar\ \href{mailto:gtatar@tatar-family.com}{gtatar@tatar-family.com}}\\
 \par}
 
 \IF{SUMMARY}{%
   \resheader{SUMMARY}
 
-  25 years building systems where correctness and performance matter. This work includes developing automated mainframe-to-cloud code conversion platforms at Amdocs, leading an 8-engineer team migrating a .NET monolith to AWS microservices that run 5 global factories at Cimpress, and engineering storage-virtualization data-path internals (b-trees, GC, on-disk layout, cross-DC replication) at Actifio.
+  Principal/staff IC for modernization, cloud migration, and storage internals.
+  Recent work spans million-line mainframe conversion tooling at Amdocs, decomposition of a .NET monolith into \(\sim\)70 AWS microservices across 5 factories at Cimpress, and Actifio storage data-path design with p99 \(< 300\ \mu s\) latency and \(\sim\)8 GB/s cross-DC replication.
 }%
 
 \IF{SKILLS}{%
@@ -83,13 +84,10 @@
 
   \begin{itemize}
   \IFNOT{SUMMARY}{\item Principal/Staff IC across distributed systems, storage, cloud platforms, and legacy modernization.}%
-  \item Backend \& systems: Java, C\#, C++, C, Python --- performance-critical and data-integrity-critical code.
-  \item Cloud \& distributed: AWS (EC2, RDS, S3, CloudFront, CloudFormation, EKS), Kubernetes, Docker, microservices, REST, OAuth 2.0.
-  \item Databases: PostgreSQL, Microsoft SQL Server, Oracle, MariaDB; SQL and ETL tooling.
-  \item Frameworks \& runtimes: .NET Core, Spring, Tomcat, Hibernate.
-  \item Systems \& embedded: Linux, firmware, device drivers, Android, Bluetooth.
   % need substantiation for WCF, IIS, Windows Server -- still including
-  \item Also: JavaScript, HTML, CSS, SQLite, WPF, WCF, IIS, .NET Framework, Windows Server, \IF{MF}{COBOL, JCL, DB2, CICS,} SAN, iSCSI, Fibre Channel, SOAP, XML, JSON, YAML, CI/CD.
+  \item Languages: Java, C\#, C++, C, Python, SQL.
+  \item Cloud \& backend: AWS, Kubernetes, Docker, .NET Core, Spring, PostgreSQL, SQL Server, Oracle, MariaDB, REST, OAuth 2.0, CI/CD.
+  \item Specialized: ETL, Linux, Android, Bluetooth, device drivers, WPF, SQLite, SAN, iSCSI, Fibre Channel\IF{MF}{; mainframe modernization stack: COBOL, JCL, DB2, CICS}.
   \end{itemize}
 }%
 
@@ -97,75 +95,56 @@
 
 \jobheading{AMDOCS}{2023-present}{\IFELSE{MF}{Mainframe Modernization Engineer}{Cloud Migration Engineer, Platform \& Tooling}}{Remote}
 \begin{itemize}
-\item Architect and implement core components of an automated mainframe-to-cloud migration platform.
-\item Build code conversion tools that transform millions of lines of legacy \IF{MF}{COBOL, JCL, and CICS }applications into functionally equivalent C\# or Java systems.
-\item Develop ETL tooling to migrate schemas and data from legacy databases\IF{MF}{ (DB2, ADABAS, IDMS)} to modern SQL platforms such as SQL Server, Oracle, and PostgreSQL.
-\item Develop Java and C\# compatibility libraries that emulate mainframe features on Linux and Windows.
+\item Architect core components of an automated mainframe-to-cloud migration platform for million-line legacy estates.
+\item Build code-generation and ETL tooling that converts \IF{MF}{COBOL, JCL, CICS, DB2, ADABAS, and IDMS }applications into functionally equivalent C\#/Java systems and modern SQL platforms.
+\item Implement Java and C\# compatibility libraries that preserve mainframe behavior on Linux and Windows.
 %\item Designed the containerized runtime platform for migrated workloads, packaging converted C\# and Java services with Docker and deploying them to Kubernetes on Amazon EKS.
-\item C\#, Java, SQL Server, Oracle, PostgreSQL.
 \end{itemize}
 
 \jobheading{ZYRLO}{2021-2023}{Software Architect}{Sudbury, MA}
 \begin{itemize}
-\item Defined the software architecture and implemented core system components for an assistive device for visually impaired users.
-\item Architected and built the software stack around the main CM4 controller running Ubuntu Core, with an SD410/Android subsystem for braille and accessibility, and ESP32 firmware.
-\item Implemented the key software and hardware interfaces across the product stack, including custom protocols, Bluetooth, Android integration, and Linux drivers.
-\item Worked with hardware engineers on schematic reviews, board bring-up, and hardware/software debugging, including bootloader configuration and driver integration.
-\item Technologies: C, C++, Python, Ubuntu Core, Android, Bluetooth, device drivers.
+\item Architected the software stack for an assistive device spanning CM4/Ubuntu Core, Android braille software, and ESP32 firmware.
+\item Built hardware/software interfaces across custom protocols, Bluetooth, Linux drivers, board bring-up, and hardware debugging.
 \end{itemize}
 
 \jobheading{AKRUTO, INC}{2019-2021}{Founder}{Needham, MA}
 \begin{itemize}
-\item Founded and operated AkrutoSync, a commercial software product that synchronized Microsoft Outlook contacts and calendars with smartphones for paying customers.
-\item Reimplemented Microsoft Exchange synchronization protocols from documentation and observed Exchange Server behavior, including SOAP and XML message handling and OAuth 2.0 support for Microsoft 365 modern authentication.
-\item Designed and implemented the core synchronization engine as a Windows desktop application (C\#/WPF, .NET Framework, SQLite)
-\item Built and operated the customer-facing website (JavaScript/HTML/CSS) along with a license and auto-update service (.NET Framework) for the installed desktop clients, driven by a CI/CD pipeline for automated releases.
-\item Owned product delivery and business operations end to end, including billing via Stripe, customer support, and management of contractors for marketing and technical support.
+\item Founded and shipped AkrutoSync, a commercial Outlook/mobile synchronization product for paying customers.
+\item Reimplemented Microsoft Exchange sync protocols from documentation and observed server behavior, including SOAP/XML handling and OAuth 2.0 for Microsoft 365.
+\item Owned the product end to end: synchronization engine, licensing/update services, website, billing, support, and contractor management.
 \end{itemize}
 
 \jobheading{CIMPRESS/VISTAPRINT}{2013-2019}{Lead Software Engineer}{Waltham, MA}
 \begin{itemize}
-\item Led an 8-engineer team within a 1,000-engineer organization in a company-wide initiative to migrate a legacy .NET/WPF/SQL Server monolith to $\sim$70 REST/JSON microservices on AWS (.NET Core on Ubuntu, MariaDB).
-\item Architected the microservices for our team's domains and developed mission-critical software driving end-to-end operations across 5 global factories (consumer order processing, production scheduling, supply chain, worker shifts, and shipping).
-\item Owned the full lifecycle of these distributed microservices—from system design to DevOps—driving a gradual decoupling strategy, building CI/CD pipelines for automated deployment, and managing cloud infrastructure with YAML CloudFormation templates across EC2, RDS, S3, and CloudFront.
-\item Later containerized the .NET Core services with Docker and migrated the fleet from EC2-hosted deployments onto Amazon EKS, standardizing Kubernetes-based deployments, rolling updates, and horizontal autoscaling across the 5-factory production footprint.
-\item Owned direct integration with new manufacturing equipment, including commercial digital presses and embroidery machines.
-\item Drove the evaluation and implementation of OAuth 2.0 with Auth0 to secure authentication and authorization across the new microservices architecture.
+\item Led an 8-engineer team inside a 1{,}000-engineer organization migrating a .NET/WPF/SQL Server monolith into $\sim$70 AWS microservices.
+\item Architected and delivered services that ran end-to-end factory operations across 5 global sites, spanning order processing, scheduling, supply chain, staffing, and shipping.
+\item Owned design through DevOps: gradual service decomposition, CI/CD, and CloudFormation-managed EC2, RDS, S3, and CloudFront infrastructure.
+\item Containerized the .NET Core fleet and moved it to EKS with rolling deployments and autoscaling; also handled factory-equipment integration and Auth0-based OAuth 2.0 security.
 \end{itemize}
 
 \jobheading{DESKTONE, INC}{2012-2013}{Engineering Lead}{Lexington, MA}
 \begin{itemize}
-\item Engineering lead for a Desktop-as-a-Service product delivering virtual machines through private and public cloud.
-\item Led the conversion from a single-datacenter system to a multi-datacenter architecture, including PostgreSQL replication, cross-DC communication, and failover/failback.
-\item Provided technical leadership and mentoring for junior team members.
-\item Defined a redundant multi-datacenter design with pairs of each node type in every datacenter.
-\item Java, Tomcat, Spring, Hibernate, Ubuntu Linux, PostgreSQL, Python.
+\item Led redesign of a Desktop-as-a-Service platform from single-datacenter operation to redundant multi-datacenter operation.
+\item Defined redundant multi-DC architecture with paired node types, PostgreSQL replication, cross-DC communication, and failover/failback.
 \end{itemize}
 
 \jobheading{ACTIFIO, INC}{2009-2012}{Architect}{Waltham, MA}
 \begin{itemize}
-\item Architected and developed system-level components for Actifio's storage virtualization appliance.
-\item Designed core data-path subsystems including b-trees, indexes, garbage collection, on-disk data layout, and offsite backup and restore.
-\item Built code in the block-IO path, where correctness of every IO and sub-millisecond latency (p99 $<$ 300 $\mu$s) were hard requirements.
-\item Designed a high-throughput TCP-based protocol to duplicate data between datacenters, sustaining $\sim$8 GB/s.
-\item C++, SUSE Linux, Fibre Channel, iSCSI, SAN.
+\item Architected storage-virtualization appliance subsystems including b-trees, indexes, garbage collection, on-disk layout, and offsite backup/restore.
+\item Wrote correctness-critical block-IO-path code with p99 latency below 300 $\mu$s.
+\item Designed a TCP replication protocol sustaining $\sim$8 GB/s between datacenters.
 \end{itemize}
 
 \jobheading{APPIQ, INC. (acquired by HP in 2005)}{2001-2009}{Software Engineer, Sr Software Engineer, Principal Software Engineer}{Marlborough, MA}
 \begin{itemize}
-\item Led Sustaining Engineering team for 2 years. Handled customer escalations, assigned support cases, monitored progress, worked with support organization and directly with customers. Found ways to make the product easier to support.
-\item Worked with SNIA (Storage Networking Industry Association). Participated in SNIA plugfests. Demonstrated Storage Essentials product at the SNW (Storage Networking World).
-\item On the Storage Essentials Advanced Development team, helped reengineer the product for scale-out, tolerance to SAN problems, and an improved user interface.
-\item Built the storage system provider framework used to add device support, created storage system providers, and mentored new team members.
-\item Java, JBoss, Tomcat, Spring, Windows, SunOS, Red Hat Linux, Oracle, SMI-S, Fibre Channel, iSCSI, SAN.
+\item Helped reengineer Storage Essentials for scale-out growth and tolerance of SAN failures.
+\item Built the provider framework used to add device support and later led sustaining engineering/customer escalations.
 \end{itemize}
 
 \resheader{EDUCATION}
 
 \jobheading{HARVARD UNIVERSITY EXTENSION SCHOOL}{2005}{Master of Liberal Arts, Information Technology}{Cambridge, MA}
 
-For master's thesis, wrote a C compiler front end and code generator.
-
-Was able to parse the entire source code for the Apache web server into an internal representation, convert from internal representation back to C code, then compile it and use the web server.
+Master's thesis: built a C compiler front end and code generator that round-tripped Apache HTTP Server source into compilable C.
 
 \end{document}
