@@ -30,7 +30,7 @@
 \newflag{SKILLS}{true}    % if we want a skills block on the resume
 
 \newflag{MF}{true}        % if we are targetting mainframe modernization jobs
-\newflag{EMBEDDED}{true}  % if we are targetting firmware/embedded jobs
+\newflag{EMBEDDED}{false}  % if we are targetting firmware/embedded jobs
 \newflag{COMPILER}{true}  % if we are targetting compiler-related jobs
 
 \pagenumbering{gobble}
@@ -107,9 +107,16 @@
 
 \jobheading{ZYRLO}{2021-2023}{Software Architect}{Sudbury, MA}
 \begin{itemize}
-\item Defined the software architecture and built the stack for an assistive device for visually impaired users---a CM4 controller running Ubuntu Core, an SD410/Android subsystem for braille and accessibility, and ESP32 firmware---including custom protocols, Bluetooth, Android integration, and Linux drivers.
-\item Worked with hardware engineers on schematic reviews, board bring-up, and HW/SW debugging, including bootloader configuration and driver integration.
-\item Technologies: C, C++, Python, Ubuntu Core, Android, Bluetooth, device drivers.
+\IFELSE{EMBEDDED}{%
+\item Defined the software architecture and implemented core system components for an assistive device for visually impaired users.
+\item Architected and built the software stack around the main CM4 controller running Ubuntu Core, with an SD410/Android subsystem for braille and accessibility, and ESP32 firmware.
+\item Implemented the key software/hardware interfaces across the product stack, including custom protocols, Bluetooth, Android integration, and Linux drivers.
+\item Worked with hardware engineers on schematic reviews, board bring-up, and hardware/software debugging, including bootloader configuration and driver integration.
+}{%
+\item Architected the software stack for an assistive device spanning CM4/Ubuntu Core, an SD410/Android subsystem for braille and accessibility, and ESP32 firmware.
+\item Implemented the key software and hardware interfaces across the product stack, including custom protocols, Bluetooth, Android integration, and Linux drivers.
+}%
+\item C, C++, Python, Ubuntu Core, Android, Bluetooth, device drivers.
 \end{itemize}
 
 \jobheading{AKRUTO, INC}{2019-2021}{Founder}{Needham, MA}
