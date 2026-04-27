@@ -125,7 +125,7 @@
 
 \jobheading{CIMPRESS/VISTAPRINT}{2013-2019}{Lead Software Engineer}{Waltham, MA}
 \begin{itemize}
-\item Led an 8-engineer team within a 1,000-engineer organization in a company-wide initiative to migrate a legacy .NET/WPF/SQL Server monolith to a modern REST/JSON microservices architecture on AWS (.NET Core on Ubuntu, MariaDB).
+\item Led an 8-engineer team within a 1,000-engineer organization in a company-wide initiative to migrate a legacy .NET/WPF/SQL Server monolith to $\sim$70 REST/JSON microservices on AWS (.NET Core on Ubuntu, MariaDB).
 \item Architected the microservices for our team's domains and developed mission-critical software driving end-to-end operations across 5 global factories (consumer order processing, production scheduling, supply chain, worker shifts, and shipping).
 \item Owned the full lifecycle of these distributed microservices—from system design to DevOps—driving a gradual decoupling strategy, building CI/CD pipelines for automated deployment, and managing cloud infrastructure with YAML CloudFormation templates across EC2, RDS, S3, and CloudFront.
 \item Later containerized the .NET Core services with Docker and migrated the fleet from EC2-hosted deployments onto Amazon EKS, standardizing Kubernetes-based deployments, rolling updates, and horizontal autoscaling across the 5-factory production footprint.
@@ -146,8 +146,8 @@
 \begin{itemize}
 \item Architected and developed system-level components for Actifio's storage virtualization appliance.
 \item Designed core data-path subsystems including b-trees, indexes, garbage collection, on-disk data layout, and offsite backup and restore.
-\item Built code in the block-IO path, where correctness of every IO and sub-millisecond latency were hard requirements.
-\item Designed a high-throughput TCP-based protocol to duplicate data between datacenters.
+\item Built code in the block-IO path, where correctness of every IO and sub-millisecond latency (p99 $<$ 300 $\mu$s) were hard requirements.
+\item Designed a high-throughput TCP-based protocol to duplicate data between datacenters, sustaining $\sim$8 GB/s.
 \item C++, SUSE Linux, Fibre Channel, iSCSI, SAN.
 \end{itemize}
 
