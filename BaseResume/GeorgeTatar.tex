@@ -121,9 +121,11 @@
 
 \jobheading{AKRUTO, INC}{2019-2021}{Founder}{Needham, MA}
 \begin{itemize}
-\item Founded and operated AkrutoSync, a commercial product syncing Microsoft Outlook contacts/calendars with smartphones; owned end-to-end product delivery and business operations including Stripe billing, customer support, and contractor management.
-\item Reimplemented Microsoft Exchange synchronization protocols from documentation and observed server behavior (SOAP/XML, OAuth 2.0 for Microsoft 365), and built the core sync engine as a Windows desktop application (C\#/WPF, .NET Framework, SQLite).
-\item Built and operated the customer-facing website (JavaScript/HTML/CSS) plus a license and auto-update service (.NET Framework) for installed clients, driven by a CI/CD pipeline for automated releases.
+\item Founded and shipped AkrutoSync, a commercial product syncing Microsoft Outlook contacts/calendars with smartphones.
+%\item Owned end-to-end product delivery and business operations including Stripe billing, customer support, and contractor management.
+\item Built an Exchange ActiveSync server inside a Windows desktop app that iOS Mail and Android's native Exchange clients connected to as if it were Exchange itself, reading the user's local Outlook via MAPI and driving stateful, bidirectional sync with change tracking and conflict resolution for contacts and calendars, all from Microsoft's protocol specifications and observed server behavior.
+%\item Built and operated the customer-facing website, plus licensing, billing and auto-update services  driven by a CI/CD pipeline for automated releases.
+\item C\#, .NET Framework, WPF, MAPI, Windows, SQLite.
 \end{itemize}
 
 \jobheading{CIMPRESS/VISTAPRINT}{2013-2019}{Lead Software Engineer}{Waltham, MA}
