@@ -11,3 +11,18 @@ Rough sketch of the surface area at a company like 2009-2012 Actifio:
 •	Sky / cloud variants — emerging in this period.
 Realistic split: data-path is maybe 20-30% of engineering at a company like that.
 
+
+Papers to read:
+Ohad Rodeh, "B-trees, Shadowing, and Clones," published in ACM Transactions on Storage (TOS), vol. 3, no. 4, Feb. 2008 (an earlier workshop version appeared at LinuxCon / the 2007 Linux Storage & Filesystem Workshop). It's the foundational paper on copy‑on‑write (a.k.a. "shadowed") B-trees for storage systems, and it's the design basis for btrfs's metadata layer.
+
+
+Zhu et al. "Avoiding the Disk Bottleneck in the Data Domain Deduplication File System (FAST '08)"
+It's important because it's the paper that turned inline deduplication at scale from "theoretically appealing but I/O‑bound" into a shipping product category. Almost every dedup storage system built in the next 10–15 years (including Actifio's) traces its index design back to it.
+
+If you imagine a small bookshelf for "how modern storage systems are built"
+
+Rosenblum & Ousterhout, "The Design and Implementation of a Log‑Structured File System" (SOSP '91) — the LFS paper, which is why segment‑cleaning GC exists.
+Quinlan & Dorward, "Venti: a new approach to archival storage" (FAST '02) — the first major content‑addressable archival store.
+Muthitacharoen et al., "A Low‑Bandwidth Network File System" (LBFS) (SOSP '01) — variable‑sized chunking via Rabin fingerprints.
+Rodeh, "B‑trees, Shadowing, and Clones" (TOS '08) — the CoW B‑tree paper that underpins btrfs and a lot of modern snapshot metadata.
+Zhu, Li, Patterson, FAST '08 — the paper that made all of the above usable for production‑scale inline dedup.

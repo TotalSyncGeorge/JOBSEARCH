@@ -146,10 +146,11 @@
 
 \jobheading{ACTIFIO}{2009-2012}{Architect}{Waltham, MA}
 \begin{itemize}
-\item Architected and developed system-level components for Actifio's storage virtualization appliance.
-\item Designed core data-path subsystems including b-trees, indexes, garbage collection, on-disk data layout, and offsite backup and restore.
-\item Built code in the block-IO path, where correctness of every IO and sub-millisecond latency (p99 $<$ 300 $\mu$s) were hard requirements.
-\item Designed a high-throughput TCP-based protocol to duplicate data between datacenters, sustaining $\sim$8 GB/s.
+\item Architect on the data-path team for Actifio's storage virtualization appliance (Copy Data Management platform).
+\item Primary author and maintainer of the on-disk format and indexing subsystem for dedup-backed virtual copies: copy-on-write B-trees, content-addressable dedup index, garbage collection, and crash-consistent recovery.
+\item Code in this subsystem sat on the critical block-IO path serving SAN clients over Fibre Channel and iSCSI, where p99 $<$ 300 $\mu$s latency and per-write durability were hard invariants the team held in production.
+%\item Designed the wire format, send-side serialization, and receive-side ingest for cross-datacenter replication of this on-disk subsystem; the team's pipelined TCP replication path sustained $\sim$8 GB/s in production and supported offsite backup, DR, and cross-site dedup.
+\item Active reviewer on adjacent data-path designs (snapshot/instant-mount, application capture).
 \item C++, SUSE Linux, Fibre Channel, iSCSI, SAN.
 \end{itemize}
 
