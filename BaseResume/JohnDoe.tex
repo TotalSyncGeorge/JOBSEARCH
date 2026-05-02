@@ -78,7 +78,7 @@
 
   25 years building systems where data integrity and performance are non-negotiable.
   %Principal/staff IC for modernization, cloud migration, and storage internals.
-  Recent work spans million-line mainframe conversion tooling at Amdocs, decomposition of a .NET monolith into $\sim$70 AWS microservices across 5 factories at Cimpress, and Actifio storage data-path design with p99 $<$ 300\textmu s latency and $\sim$8 GB/s cross-DC replication.
+  Recent work spans million-line mainframe conversion tooling at Amdocs, decomposition of a .NET monolith into $\sim$70 AWS microservices across 5 factories at Cimpress, and Actifio storage data-path design with p99 $<$ 300~\textmu s latency and $\sim$8 GB/s cross-DC replication.
 }%
 
 \IF{SKILLS}{%
@@ -147,7 +147,7 @@
 \jobheading{ACTIFIO}{2009-2012}{Architect}{Waltham, MA}
 \begin{itemize}
 \item On the data-path team for Actifio's Copy Data Management platform, wrote and maintained the on-disk format and indexing subsystem behind dedup-backed virtual copies: copy-on-write B-trees, content-addressable dedup index, garbage collection, and crash-consistent recovery.
-\item Developed performance-critical code on the block-IO path serving SAN clients over Fibre Channel and iSCSI, under hard production requirements of p99 $<$ 300 $\mu$s latency and per-write durability.
+\item Developed performance-critical code on the block-IO path serving SAN clients over Fibre Channel and iSCSI, under hard production requirements of p99 $<$ 300~\textmu s latency and per-write durability.
 \item Designed the wire format, send-side serialization, and receive-side ingest for cross-datacenter replication of this on-disk subsystem; the team's pipelined TCP replication path sustained $\sim$8 GB/s in production and supported offsite backup, DR, and cross-site dedup.
 %\item Architect-level reviewer on adjacent data-path designs (snapshot/instant-mount, application capture).
 \item C++, SUSE Linux, Fibre Channel, iSCSI, SAN.
