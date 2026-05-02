@@ -1,0 +1,13 @@
+Opus 4.7 thinking high knows quite a bit about Actifio (both 2009-2012 era and in general)
+
+Rough sketch of the surface area at a company like 2009-2012 Actifio:
+•	Data-path / storage core — IO path, on-disk format, dedup, GC, replication. The IP.
+•	Application integration — VMware, Oracle, SQL Server, Exchange, SAP capture/mount agents. Big team at Actifio specifically; SLA-driven app capture was their headline marketed feature.
+•	Management / orchestration / SLA engine — policies, schedules, the workflow that drove copies and mounts. Substantial.
+•	UI, REST API, CLI — its own team.
+•	Platform / appliance / installer / upgrade / serviceability — non-trivial for shipping a physical box.
+•	Networking targets — FC and iSCSI target stacks, NFS/SMB mount-back paths.
+•	QA / test infra / hardware lab — at storage companies this is a real slice of headcount.
+•	Sky / cloud variants — emerging in this period.
+Realistic split: data-path is maybe 20-30% of engineering at a company like that.
+
