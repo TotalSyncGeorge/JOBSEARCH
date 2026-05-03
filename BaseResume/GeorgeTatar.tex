@@ -46,8 +46,8 @@
   {}
   {0pt}
   {}
-  [\vspace{3pt}{\color{accent}\titlerule[0.8pt]}]
-\titlespacing*{\section}{0pt}{12pt}{8pt}
+  [\vspace{2.8pt}{\color{accent}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{12pt}{0pt}
 
 \setlist[itemize]{
   leftmargin=1.2em,
@@ -57,9 +57,9 @@
   partopsep=0pt
 }
 
-\newcommand{\resheader}[1]{\section*{#1}\vspace{-4pt}}
+\newcommand{\resheader}[1]{\section*{#1}}
 \newcommand{\jobheading}[4]{%
-  \vspace{6pt}\begin{tabularx}{\textwidth}{@{}X r@{}}
+  \vspace{5.6pt}\begin{tabularx}{\textwidth}{@{}X r@{}}
     {\textbf{#1}} & {\textbf{#2}} \\
     {{\normalsize #3}\hspace{0.5em}{\color{muted}·}\hspace{0.5em}{\color{muted}#4}} & {} \\
   \end{tabularx}\vspace{2pt}
@@ -75,6 +75,7 @@
 
 \IF{SUMMARY}{%
   \resheader{SUMMARY}
+  \vspace{5.6pt}
 
   25 years building systems where data integrity and performance are non-negotiable.
   %Principal/staff IC for modernization, cloud migration, and storage internals.
@@ -83,6 +84,7 @@
 
 \IF{SKILLS}{%
   \resheader{SKILLS}
+  \vspace{5.6pt}
 
   \begin{itemize}
   \IFNOT{SUMMARY}{\item Principal/Staff IC across distributed systems, storage, cloud platforms, and legacy modernization.}%
