@@ -58,6 +58,7 @@
 }
 
 \newcommand{\resheader}[1]{\section*{#1}}
+\newcommand{\inlinebullet}{\unskip\nobreak\hspace{0.4em}\raisebox{0.01ex}{\color{muted}\small\textbullet}\nobreak\hspace*{0.4em}\ignorespaces}
 \newcommand{\jobheading}[4]{%
   \vspace{5.6pt}\begin{tabularx}{\textwidth}{@{}X r@{}}
     {\textbf{#1}} & {\textbf{#2}} \\
@@ -77,9 +78,9 @@
   \resheader{SUMMARY}
   \vspace{5.6pt}
 
-  25 years building systems where data integrity and performance are non-negotiable.
-  %Principal/staff IC for modernization, cloud migration, and storage internals.
-  Recent work spans million-line mainframe conversion tooling at Amdocs, decomposition of a .NET monolith into $\sim$70 AWS microservices across 5 factories at Cimpress, and Actifio storage data-path design with p99 $<$ 300~\textmu s latency and $\sim$8 GB/s cross-DC replication.
+  Currently building automated code-conversion tooling and runtime libraries that turn millions of lines of legacy code into C\#/Java cloud services{\inlinebullet}
+  Re-architected a single-DC SaaS control plane to survive full-datacenter loss{\inlinebullet}
+  Built a clean-room Microsoft Exchange-compatible sync server; iOS and Android couldn't tell it from Exchange.
 }%
 
 \IF{SKILLS}{%
