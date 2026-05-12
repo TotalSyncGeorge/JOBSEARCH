@@ -148,9 +148,8 @@
 
 \jobheading{ACTIFIO}{2009-2012}{Architect}{Waltham, MA}
 \begin{itemize}
-\item On the data-path team for Actifio's Copy Data Management platform, wrote and maintained the on-disk format and indexing subsystem behind dedup-backed virtual copies: copy-on-write B-trees, content-addressable dedup index, garbage collection, and crash-consistent recovery.
-\item Achieved sub-300~\textmu s p99 latency while enforcing strict per-write durability for connected hosts over Fibre Channel and iSCSI.
-\item Designed the wire format, send-side serialization, and receive-side ingest for cross-datacenter replication of this on-disk subsystem; the team's pipelined TCP replication path sustained $\sim$8 GB/s in production and supported offsite backup, DR, and cross-site dedup.
+\item On the data-path team for Actifio's Copy Data Management platform, wrote and maintained the storage engine internals behind dedup-backed virtual copies: copy-on-write B-trees, content-addressable dedup index, garbage collection, and durable atomic updates.
+\item Designed and built a deduplication-aware cross-datacenter replication protocol delivering sub-day RPO: wire format, send-side serialization with zlib compression, and receive-side ingest, transmitting only globally-unique content-addressed blocks; pipelined for high-RTT WAN and resumable via content addressing.
 %\item Architect-level reviewer on adjacent data-path designs (snapshot/instant-mount, application capture).
 \item C++, SUSE Linux, Fibre Channel, iSCSI, SAN.
 \end{itemize}
