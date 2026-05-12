@@ -20,8 +20,6 @@ How it proves it: Scope & decomposition numbers
 ## Actifio
 What it proves: Deep technical chops as an architect
 
-How it proves it: µs latency, GB/s throughput, b-trees
-
 ## Desktone
 What it proves: Distributed-systems failure design
 
