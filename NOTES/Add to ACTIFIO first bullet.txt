@@ -1,0 +1,15 @@
+Strong candidates (high systems-depth signal, naturally part of the storage engine):
+
+1. Write-ahead log / journaling — almost universally paired with COW B-trees and crash-consistent recovery. Did you write the journal/WAL itself, or was crash recovery built on someone else's logging primitive?
+2. Reference counting for dedup-shared blocks — required to make the CAS index + GC actually safe. Almost always lives in the same code as the dedup index. Was this yours?
+3. Read I/O path for virtual copies — translating client block reads (over iSCSI/FC) into B-tree lookups → CAS chunk fetches. This is the "data path" work. 
+
+Did you own this serving path, or only the persistence/metadata side?
+
+4. Chunking pipeline — fixed- or variable-size chunking that feeds the CAS index on ingest. Often the front of the dedup pipeline. Yours?
+Possible but smaller / more peripheral:
+5. Free-space allocator / extent manager — closely related to GC; sometimes the same code, sometimes adjacent.
+6. Snapshot / clone primitives — the user-facing operation enabled by the COW B-trees. Could be considered storage-engine, could be considered the layer above.
+7. Compression in the dedup pipeline.
+8. Page/block buffer cache for the engine.
+
